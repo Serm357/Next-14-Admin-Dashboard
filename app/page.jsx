@@ -1,3 +1,4 @@
+"use client";
 // TODO
 import { MongoClient } from "mongodb";
 
