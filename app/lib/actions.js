@@ -94,6 +94,23 @@ export const addProduct = async (formData) => {
   revalidatePath("/dashboard/products");
   redirect("/dashboard/products");
 };
+export const addSampleData = async () => {
+  try {
+    connectToDB();
+
+    const newProduct = new Product({
+      title: "test product 1",
+      desc: "test productt description ....",
+      price: 225,
+      stock: 5,
+    });
+
+    await newProduct.save();
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to create sampleData");
+  }
+};
 
 export const updateProduct = async (formData) => {
   const { id, title, desc, price, stock, color, size } =
