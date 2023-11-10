@@ -4,7 +4,7 @@ import { MongoClient } from "mongodb";
 
 const Homepage = () => {
   // Replace the uri string with your MongoDB deployment's connection string.
-  const uri = process.env.MONGO;
+  const uri = process.env.NEXT_PUBLIC_MONGO;
 
   // Create a new client and connect to MongoDB
   const client = new MongoClient(uri);
