@@ -91,7 +91,8 @@ const Sidebar = async () => {
           height="50"
         />
         <div className={styles.userDetail}>
-          <span className={styles.username}>{user.username || "null"}</span>
+          {/* <span className={styles.username}>{user.username || "null"}</span> */}
+          <span className={styles.username}> SermDeveloper</span>
           <span className={styles.userTitle}>Administrator</span>
         </div>
       </div>
